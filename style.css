@@ -46,6 +46,16 @@ body{margin:0;background:linear-gradient(180deg,var(--bg),#061221);color:var(--t
   justify-content: center;
   align-items: center;
 }
+.proj-btns {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn.small {
+  padding: 6px 10px;
+  font-size: 13px;
+}
 
 
 /* small toc */
