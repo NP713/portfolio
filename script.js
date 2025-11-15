@@ -41,24 +41,56 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // CV Print / Save as PDF
-  const printCv = document.getElementById('printCv');
-  printCv && printCv.addEventListener('click', () => {
-    // Open a new window with CV content and call print
-    const cvSection = document.querySelector('#cv').innerHTML;
-    const win = window.open('', '_blank', 'width=900,height=800');
-    win.document.write(`
-      <html><head>
-        <title>Naishal Patel — CV</title>
-        <style>
-          body{font-family:Inter, Arial; padding:30px; color:#111}
-          h2{color:#0b69a3}
-          .cv-left,.cv-right{margin-bottom:12px}
-        </style>
-      </head><body>
-      ${cvSection}
-      <script>window.onload = ()=> { window.print(); }</script>
-      </body></html>`);
-    win.document.close();
+  // ----- Generate Clean PDF CV -----
+document.getElementById("printCv").addEventListener("click", async () => {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
+
+  const title = "Naishal Patel — CV";
+  const body = `
+Computer Engineering Student — PDEU
+
+Skills:
+Java, Spring Boot, Spring Security, React, JavaScript,
+MySQL, MongoDB, REST APIs, Git, JWT Auth
+
+Projects:
+1. Full-Stack E-Commerce Platform
+   - Spring Boot + React
+   - JWT Auth, Product CRUD, Admin Panel, Cart & Checkout
+
+2. Finance Management System
+   - Spring Boot + React + MongoDB
+   - Expense Tracking, Dashboards, Categories
+
+Certifications:
+- Udemy Certificate 1 (Backend)
+- Udemy Certificate 2 (Frontend)
+
+Achievements:
+- Completed 100-Day LeetCode Challenge
+
+Contact:
+Email: naishal.patel710@gmail.com
+GitHub: https://github.com/NP713
+LinkedIn: linkedin.com/in/naishal-patel-b61a84281
+  `;
+
+  doc.setFont("Helvetica", "bold");
+  doc.setFontSize(18);
+  doc.text(title, 10, 20);
+
+  doc.setFont("Helvetica", "normal");
+  doc.setFontSize(11);
+
+  let yPos = 35;
+  body.split("\n").forEach(line => {
+    doc.text(line, 10, yPos);
+    yPos += 7;
   });
+
+  doc.save("Naishal_Patel_CV.pdf");
+});
+
 
 });
