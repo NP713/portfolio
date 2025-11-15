@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Naishal Patel — Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- AOS CDN -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="#home">Naishal Patel</a>
+      <nav class="navlinks" id="navlinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#cv">Resume</a>
+        <a href="#academic">Academic</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="hamb" aria-label="menu">☰</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-left" data-aos="fade-right">
+        <h1>Naishal Patel</h1>
+        <p class="tag">Turning ideas into scalable software.</p>
+        <p class="muted">Computer Engineering Student • PDEU</p>
+
+        <div class="ctas">
+          <a class="btn" href="#cv">View CV</a>
+          <a class="btn ghost" href="#projects">Projects</a>
+          <a class="btn ghost" href="#contact">Contact</a>
+        </div>
+      </div>
+
+    <div class="hero-right" data-aos="fade-left">
+  <img id="profile-img" src="img.jpeg" alt="Naishal Patel" class="profile-img">
+</div>
+    </div>
+  </section>
+
+  <!-- quick toc -->
+  <section class="toc wrap" aria-hidden="false">
+    <a href="#about">About</a> · <a href="#skills">Skills</a> · <a href="#projects">Projects</a> · <a href="#cv">CV</a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="sec wrap" data-aos="fade-up">
+    <h2>About</h2>
+    <p class="short">
+      Computer Engineering student at PDEU. I build backend-first web apps using Java & Spring Boot and React frontends.
+      Focus: clean architecture, reliable APIs, and efficient data handling.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="sec alt wrap" data-aos="fade-up">
+    <h2>Skills</h2>
+    <div class="grid-2">
+      <div>
+        <h3>Technical</h3>
+        <ul class="simple">
+          <li>Java, Spring Boot, Spring Security, Spring Data JPA</li>
+          <li>React.js, JavaScript, HTML & CSS</li>
+          <li>MySQL, MongoDB, REST APIs, JWT</li>
+          <li>Git, Postman, IntelliJ, VS Code</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Soft</h3>
+        <ul class="simple">
+          <li>Problem solving</li>
+          <li>Communication</li>
+          <li>Teamwork & leadership</li>
+          <li>Time management</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="sec wrap" data-aos="fade-up">
+  <h2>Projects</h2>
+
+  <div class="projects">
+
+    <div class="proj">
+      <h3>Full-Stack E-Commerce Platform</h3>
+      <p class="meta">Spring Boot · React · Spring Security · JPA · MySQL</p>
+
+      <p class="short">
+        A production-style e-commerce system with complete product lifecycle management,
+        authentication, secure APIs, and order workflows.
+      </p>
+
+      <ul class="simple">
+        <li>Role-based login (Admin/User) using JWT</li>
+        <li>Product CRUD, search, sorting & filtering</li>
+        <li>Cart, checkout and protected API endpoints</li>
+        <li>Order history + Admin inventory panel</li>
+        <li>Backend built with layered architecture (Controller → Service → Repo)</li>
+      </ul>
+    </div>
+
+    <div class="proj">
+      <h3>Finance Management System</h3>
+      <p class="meta">Spring Boot · React · MongoDB</p>
+
+      <p class="short">
+        A personal finance tracker that helps users manage expenses, visualize spending,
+        and analyze categories using charts & secure storage.
+      </p>
+
+      <ul class="simple">
+        <li>Expense add/update/delete with category tagging</li>
+        <li>JWT-secured backend API</li>
+        <li>MongoDB models for flexible transaction storage</li>
+        <li>Interactive dashboard with charts (daily, weekly, monthly)</li>
+        <li>CSV export + analytics for spending patterns</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="sec alt wrap" data-aos="fade-up">
+    <h2>Certifications</h2>
+    <div class="certs">
+      <a class="cert" href="https://www.udemy.com/certificate/UC-3b6da0d9-9faa-4f0b-a9e5-1e92c2e83607/" target="_blank">Udemy Certificate 1</a>
+      <a class="cert" href="https://www.udemy.com/certificate/UC-3d9cc048-1fc2-4bc6-b629-bf48d88c08cd/" target="_blank">Udemy Certificate 2</a>
+    </div>
+  </section>
+
+  <!-- RESUME / CV -->
+  <section id="cv" class="sec wrap" data-aos="fade-up">
+    <div class="cv-head">
+      <h2>Resume</h2>
+      <div class="cv-actions">
+        <button class="btn" id="printCv">Download CV (PDF)</button>
+        <a class="btn ghost" href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <div class="cv-card">
+      <div class="cv-left">
+        <h3>Naishal Patel</h3>
+        <p class="muted">B.Tech — Computer Engineering, PDEU</p>
+        <p><strong>CGPA:</strong> 9.75</p>
+
+        <h4>Contact</h4>
+        <p><a href="mailto:naishal.patel710@gmail.com">naishal.patel710@gmail.com</a></p>
+        <p><a href="https://github.com/NP713" target="_blank">github.com/NP713</a></p>
+        <p><a href="https://www.linkedin.com/in/naishal-patel-b61a84281" target="_blank">linkedin.com/in/naishal-patel-b61a84281</a></p>
+
+        <h4>Achievements</h4>
+        <ul class="simple">
+          <li>Completed 100-Day LeetCode Challenge</li>
+        </ul>
+
+        <h4>Certificates</h4>
+        <ul class="simple">
+          <li>Udemy — see Certifications</li>
+        </ul>
+      </div>
+
+      <div class="cv-right">
+        <h4>Skills (short)</h4>
+        <p class="muted small">Java · Spring Boot · React · JS · MySQL · MongoDB · REST · Git</p>
+
+        <h4>Projects</h4>
+        <ol class="simple">
+          <li>Full-Stack E-Commerce Platform — Spring Boot & React</li>
+          <li>Finance Management System — Spring Boot, React, MongoDB</li>
+        </ol>
+
+        <h4>Work / Roles</h4>
+        <p class="muted">Placeholder for internships / roles</p>
+
+        <h4>Hobbies</h4>
+        <p class="muted">Placeholder</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACADEMIC (short) -->
+  <section id="academic" class="sec alt wrap" data-aos="fade-up">
+    <h2>Academic</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h4>Introduction & Learning Philosophy</h4>
+        <p class="short muted">Curiosity-driven practice, hands-on projects, and disciplined study define my approach. I focus on core fundamentals and system thinking.</p>
+      </div>
+
+      <div class="card">
+        <h4>Interdisciplinary Projects (short)</h4>
+        <ul class="simple">
+          <li><strong>E-Commerce:</strong> API design, auth, order flows.</li>
+          <li><strong>Finance:</strong> Transaction modeling, UI insights.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h4>Leadership</h4>
+        <p class="muted short">Led small project teams; coordinated tasks and code reviews.</p>
+      </div>
+
+      <div class="card">
+        <h4>Ethics & Global</h4>
+        <p class="muted short">Privacy-aware design and secure coding are priorities in my work.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="sec wrap" data-aos="fade-up">
+    <h2>Contact</h2>
+    <div class="contact-grid">
+      <form id="contact-form" class="contact-form" onsubmit="return false;">
+        <label><input id="cname" type="text" placeholder="Name" required></label>
+        <label><input id="cemail" type="email" placeholder="Email" required></label>
+        <label><textarea id="cmsg" rows="5" placeholder="Message" required></textarea></label>
+        <button id="send" class="btn">Send Message</button>
+      </form>
+
+      <div class="contact-card">
+        <p><strong>Email</strong><br><a href="mailto:naishal.patel710@gmail.com">naishal.patel710@gmail.com</a></p>
+        <p><strong>GitHub</strong><br><a href="https://github.com/NP713" target="_blank">github.com/NP713</a></p>
+        <p><strong>LinkedIn</strong><br><a href="https://www.linkedin.com/in/naishal-patel-b61a84281" target="_blank">linkedin.com/in/naishal-patel-b61a84281</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <p>© <span id="year"></span> Naishal Patel</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
